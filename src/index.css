@@ -23,7 +23,7 @@ code {
 }
 
 .main{
-   background: linear-gradient(#b9e3e7, #90c0d1);
+   background: linear-gradient(#d5fcff, #56a2bb);
   padding-top:10px;
 }
 
@@ -61,14 +61,16 @@ p{
 h1{
   font-size: 6.5rem;
   font-weight:200;
-  margin-top:10%;
-  margin-bottom:5%;
-  font-family: 'helvetica neue';
+  margin: 5% auto;
+  font-family: 'helvetica neue', Helvetica, Arial, sans-serif;
   color:#fff;
+  text-shadow:2px 2px #F2AAAA;
 }
 
 span{
   text-transform: uppercase;
+  font-weight: 800;
+  text-shadow:7px 7px #F2AAAA;
 }
 
 .iconContainer{
@@ -78,7 +80,7 @@ span{
 
 .weatherIcons{
   font-size: 6rem;
-  margin: 5% 0;
+  margin: 2% 0;
   transition:400ms ease;
   padding:5px;
   color:#fff;
@@ -86,6 +88,7 @@ span{
 
 .weatherIcons:hover{
   scale:1.2;
+  filter: drop-shadow(3px 3px 1px #F2AAAA);
 }
 
 input[type=text],
@@ -106,13 +109,13 @@ input[type=text]{
   width: 60%;
   text-align: center;
   padding:20px;
+  border-bottom:solid 3px #F2AAAA;
 }
 
 input[type=text]:focus,
 input[type=text]:hover{
   border: solid 3px #F2AAAA;
 }
-
 
 button{
   width:30%;
@@ -122,7 +125,7 @@ button{
 
 button:hover,
 button:focus{
-  color: #e36387;
+  color: #F2AAAA;
   border: solid 3px #F2AAAA;
   background: #fff;
 }
@@ -181,4 +184,19 @@ button:focus{
 
 .copyright p {
   font-size:1rem;
+}
+
+@media(max-width: 500px){
+  .square{
+    min-width: 100%;
+  }
+
+  .square:hover{
+    scale:none;
+  }
+
+  .row1,
+  .row2{
+    display:block;
+  }
 }

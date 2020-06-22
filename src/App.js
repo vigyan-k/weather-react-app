@@ -8,7 +8,7 @@ import { faSearchLocation } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
 const api = {
-  base: 'https://api.openweathermap.org/data/2.5/weather?',
+  base: 'https://api.openweathermap.org/data/2.5/weather?/',
   key: '9337001bff95870d0f26deeb07c4be6f',
   units: 'metric'
 }
@@ -40,9 +40,9 @@ class App extends Component {
       this.setState({
         detailArray,
         isLoading: false
-      });
-    }).catch((error) => {
-      alert('No cities were found, please try again!')
+      })
+    }).catch((error)=>{
+      alert('There were no matching cities, please try again')
     })
   }
 
@@ -68,10 +68,10 @@ class App extends Component {
         detailArray,
         isLoading: false
       })
-    }).catch((error) => {
-      alert('No cities were found, please try again!')
+    }).catch((error)=>{
+      alert('There were no matching cities, please try again')
     })
-  };
+  }
 
   render(){
     return (
@@ -86,9 +86,7 @@ class App extends Component {
             <button onClick={this.handleClick}>Get the Weather!</button>
           </div>
           <div className='colorBox'>
-          {
-            this.state.isLoading ? <p>Enter a City!</p> :
-            this.state.detailArray.map( (item, index) => { // this.state.detail is not being recognized as an array
+          {this.state.isLoading ? <p>Enter a City!</p> : this.state.detailArray.map( (item, index) => { 
             return (
               <Weather
               key = {index}
