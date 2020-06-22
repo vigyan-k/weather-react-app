@@ -10,8 +10,7 @@ import './App.css';
 const api = {
   base: 'https://api.openweathermap.org/data/2.5/weather?',
   key: '9337001bff95870d0f26deeb07c4be6f',
-  units: 'metric',
-  city: 'New York',
+  units: 'metric'
 }
 
 class App extends Component {
@@ -24,14 +23,41 @@ class App extends Component {
     }
   }
 
-  // Put the axios request in the componentDidMount 
-  componentDidMount () {
+  handleSubmit = (event) => {
+    event.preventDefault();
     axios({
       url: api.base,
       method: 'GET',
       responseType:'JSON',
       params: {
-        q:api.city,
+        q:this.state.cityName,
+        appid: api.key,
+        units: api.units
+      }, 
+    }).then((response) => {
+      let detailArray = [];
+      detailArray.push(response.data);
+      this.setState({
+        detailArray,
+        isLoading: false
+      });
+    }).catch((error) => {
+      alert('No cities were found, please try again!')
+    })
+  }
+
+  handleChange = (event) => {
+    this.setState({cityName: event.target.value})
+  }
+
+  handleClick = (event) => {
+    event.preventDefault();
+    axios({
+      url: api.base,
+      method: 'GET',
+      responseType:'JSON',
+      params: {
+        q:this.state.cityName,
         appid: api.key,
         units: api.units
       }, 
@@ -42,23 +68,10 @@ class App extends Component {
         detailArray,
         isLoading: false
       })
+    }).catch((error) => {
+      alert('No cities were found, please try again!')
     })
-  }
-
-  handleSubmit = (event) => {
-    event.preventDefault();
-    console.log('this has been submitted')
-  }
-
-  handleChange = (event) => {
-    this.setState({cityName: event.target.value})
-    console.log(this.state.cityName);
-  }
-
-  handleClick = (event) => {
-    event.preventDefault();
-    console.log('click me')
-  }
+  };
 
   render(){
     return (
@@ -74,12 +87,11 @@ class App extends Component {
           </div>
           <div className='colorBox'>
           {
-            this.state.isLoading ? <p>Loading...</p> :
+            this.state.isLoading ? <p>Enter a City!</p> :
             this.state.detailArray.map( (item, index) => { // this.state.detail is not being recognized as an array
             return (
               <Weather
-              index = {item.id}
-              key = {item.id}
+              key = {index}
               cityName = {item.name}
               country = {item.sys.country}
               currentTemp = {item.main.temp}
