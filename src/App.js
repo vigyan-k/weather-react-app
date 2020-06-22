@@ -8,7 +8,7 @@ import { faSearchLocation } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
 const api = {
-  base: 'http://api.openweathermap.org/data/2.5/weather?',
+  base: 'https://api.openweathermap.org/data/2.5/weather?',
   key: '9337001bff95870d0f26deeb07c4be6f',
   units: 'metric',
   city: 'New York',
