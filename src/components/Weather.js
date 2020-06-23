@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Weather = ({key, cityName, country, currentTemp, feelsLike, minTemp, maxTemp, weatherDescription}) => {
+const Weather = ({cityName, country, currentTemp, feelsLike, minTemp, maxTemp, weatherDescription}) => {
     return (
-        <div index={key} key ={key} className='modal' id='modal'>
+        <div className='modal' id='modal'>
             <div className='row1'>
                 <div className='square squareOne'>
                     <p>{cityName}, {country}</p>
