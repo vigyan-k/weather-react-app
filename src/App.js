@@ -2,10 +2,7 @@ import React, {Component} from 'react';
 import axios from 'axios';
 import Search from './components/Search.js'
 import Weather from './components/Weather.js';
-// import IconsRow from './components/Icons.js';
 import DateTime from './components/DateTime.js';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faSearchLocation } from '@fortawesome/free-solid-svg-icons';
 import './App.css';
 
 const api = {
@@ -79,14 +76,6 @@ class App extends Component {
       <div className='main'>
         <div className="wrapper">
           <Search handleClick={this.handleClick} handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
-          {/* <div className='searchContainer'>
-            <h1>Weather <span>Radar</span>  <FontAwesomeIcon icon={faSearchLocation} className='searchIcon'/></h1>
-            <IconsRow />
-            <form action="" onSubmit={this.handleSubmit}>
-              <input value={this.state.value} onChange={this.handleChange}type="text" placeholder='City' />
-            </form>
-            <button onClick={this.handleClick}>Get the Weather!</button>
-          </div> */}
           <div className='colorBox'>
           {this.state.isLoading ? <p>Enter a City!</p> : this.state.detailArray.map( (item, index) => { 
             return (
