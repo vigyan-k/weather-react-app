@@ -40,8 +40,8 @@ code {
 
 .colorBox{
   background-color: #e36387;
+  padding: 20px 0;
   border-radius: 15px;
-  padding:10px 0;
   margin-bottom:10px;
   text-align: center;
   box-shadow: #FFF 5px 5px;
@@ -167,12 +167,20 @@ button:focus{
   display:flex;
 }
 
+.row3{
+  margin-top:40px;
+  border-top:5px solid #fff;
+  border-bottom:5px solid #fff;
+}
+
 .square{
   min-width: 50%;
-  padding:10px;
+  /* padding:10px; */
+  border-radius: 15px;
   text-transform: capitalize;
   min-height: 150px;
   transition: 200ms ease;
+  border: solid 3px transparent;
 }
 
 .square:hover{
@@ -184,6 +192,7 @@ button:focus{
   display:flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .squareOne p{
@@ -204,11 +213,13 @@ button:focus{
 
 .squareFour{
   display:flex;
-  justify-content: space-around;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.squareFour p {
+.squareFour p,
+.squareFive p{
   font-size: 3rem;
 }
 

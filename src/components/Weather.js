@@ -1,9 +1,9 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronUp, faChevronDown, faBolt, faCloudRain, faCloudShowersHeavy, faSnowflake, faSun, faCloud, faSmog } from '@fortawesome/free-solid-svg-icons';
+import { faArrowUp, faArrowDown, faBolt, faCloudRain, faCloudShowersHeavy, faSnowflake, faSun, faCloud, faSmog, faWind} from '@fortawesome/free-solid-svg-icons';
 
-const Weather = ({cityName, country, currentTemp, feelsLike, minTemp, maxTemp, weatherDescription, icon, main}) => {
-    // const iconUrl = `http://openweathermap.org/img/wn/${icon}@2x.png`
+const Weather = ({cityName, country, currentTemp, feelsLike, minTemp, maxTemp, weatherDescription, main, windSpeed}) => {
+
     let weatherIcon = undefined;
 
     if (main === 'Clear') {
@@ -21,6 +21,30 @@ const Weather = ({cityName, country, currentTemp, feelsLike, minTemp, maxTemp, w
     } else {
         weatherIcon = <FontAwesomeIcon icon={faSmog} />;
     }
+
+    let clothing = undefined;
+
+    if (feelsLike < 0) {
+        clothing = 'Heavy Jacket';
+    }  else if (feelsLike < 10 ) {
+        clothing = 'Jacket';
+    } else if (feelsLike < 15 ) {
+        clothing = 'Jumper';
+    }   else if (feelsLike < 20) {
+        clothing = 'Light Jacket';
+    }  else {
+        clothing = 'T-shirt';
+    }
+
+    let protection = undefined;
+
+    if (main === 'Rain' | main === 'Drizzle' | main === 'Thunderstorm' ) {
+        protection = 'you might need an Umbrella';
+    } else {
+       protection = "you don't need an umbrella";
+    }
+
+    
     
     return (
         <div className='modal' id='modal'>
@@ -29,20 +53,24 @@ const Weather = ({cityName, country, currentTemp, feelsLike, minTemp, maxTemp, w
                     <p>{cityName}, {country}</p>
                 </div>
                 <div className='square squareTwo'>
-                    <p>{currentTemp}{'\u00b0'}</p>
-                    <p>Feels like {feelsLike}{'\u00b0'}</p>
+                    <p>{currentTemp}{'\u00b0'}C</p>
+                    <p>Feels like {feelsLike}{'\u00b0'}C</p>
                 </div>
             </div>
 
             <div className="row2">
                 <div className='square squareThree'>
-                    <p className='weatherIcon'>{weatherIcon}</p>
-                    <p className='desc'>{weatherDescription}</p>
+                    <p className='weatherIcon'>{weatherIcon}{weatherDescription}</p>
+                    <p> <FontAwesomeIcon icon={faWind}className='weatherIcon'/> Wind: {windSpeed} m/s</p>
                 </div>
                 <div className='square squareFour'>
-                    <p><FontAwesomeIcon icon={faChevronDown}className='chevron'/>{minTemp}{'\u00b0'}</p>
-                    <p><FontAwesomeIcon icon={faChevronUp} className='chevron'/> {maxTemp}{'\u00b0'}</p>
+                    <p><FontAwesomeIcon icon={faArrowDown}className='weatherIcon chevron'/>{minTemp}{'\u00b0'}C</p>
+                    <p><FontAwesomeIcon icon={faArrowUp} className='weatherIcon chevron'/> {maxTemp}{'\u00b0'}C</p>
                 </div>
+            </div>
+            <div className="row3">
+                <p> Wear a {clothing} ! </p>
+                <p> Primarily {main}, {protection}</p>
             </div>
         </div>
     )

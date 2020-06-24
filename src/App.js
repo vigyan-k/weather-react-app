@@ -89,8 +89,8 @@ class App extends Component {
               minTemp = {item.main.temp_min}
               maxTemp = {item.main.temp_max}
               weatherDescription = {item.weather[0].description}
-              icon = {item.weather[0].icon}
               main = {item.weather[0].main}
+              windSpeed = {item.wind.speed}
               />
             )
           })
