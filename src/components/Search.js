@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import IconsRow from './Icons'
+import IconsRow from './Icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearchLocation } from '@fortawesome/free-solid-svg-icons';
 
