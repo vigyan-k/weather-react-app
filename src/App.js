@@ -45,7 +45,9 @@ class App extends Component {
   }
 
   handleChange = (event) => {
-    this.setState({cityName: event.target.value})
+    this.setState({
+      cityName: event.target.value
+    })
   }
 
   handleClick = (event) => {
@@ -98,9 +100,12 @@ class App extends Component {
           <DateTime />
           </div>
         </div>
-        <div className='copyright'>
-        <p>Copyright Vigyan Kayastha 2020</p>
-        </div>
+        <footer>
+          <div className='copyright'>
+          <p>Copyright Vigyan Kayastha 2020</p>
+          </div>
+        </footer>
+        
       </div>
     );
   }

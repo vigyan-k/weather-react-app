@@ -17,17 +17,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html{
-  height: 100vh;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
 .main{
-   background: linear-gradient(#63f5ff, #59c9f5);
+  background: linear-gradient(#63f5ff, #59c9f5);
   padding-top:10px;
 }
 
@@ -177,7 +173,6 @@ button:focus{
   min-width: 50%;
   border-radius: 15px;
   text-transform: capitalize;
-  min-height: 150px;
   transition: 200ms ease;
   border: solid 3px transparent;
 }
@@ -237,6 +232,10 @@ button:focus{
   background-color: #222;
   width:100%;
   padding:10px;
+}
+
+footer{
+  margin-top:14%;
 }
 
 .copyright p {
