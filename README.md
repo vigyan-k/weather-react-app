@@ -1,3 +1,9 @@
+Weather Radar!
+
+"Weather Radar" it's an online weather app using React and API. The app lets users find the weather details for their queried city and gives them a reccomendation of cothing and if they need an umbrella or not!
+
+Live site: https://vigyan-k.github.io/weather-react-app/
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
