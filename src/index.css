@@ -23,7 +23,8 @@ code {
 }
 
 .main{
-  background: linear-gradient(#63f5ff, #59c9f5);
+  background: #F8F8F8;
+  /* background: linear-gradient(#f5fdff, #def8ff); */
   padding-top:10px;
 }
 
@@ -35,7 +36,7 @@ code {
 }
 
 .colorBox{
-  background-color: #e36387;
+  border: solid #ffcd36 2px;
   padding: 20px 0;
   border-radius: 15px;
   margin-bottom:10px;
@@ -51,7 +52,7 @@ code {
 
 h2,
 p{
-  color:#fff;
+  color:#000;
   font-family: 'open sans';
   text-transform: normal;
 }
@@ -65,14 +66,14 @@ h1{
   font-weight:200;
   margin: 5% auto;
   font-family: 'helvetica neue', Helvetica, Arial, sans-serif;
-  color:#fff;
-  text-shadow:2px 2px #F2AAAA;
+  color:rgba(54, 54, 54, 0.897);
+  /* text-shadow:2px 2px #ffcd36; */
 }
 
 span{
   text-transform: uppercase;
   font-weight: 800;
-  text-shadow:7px 7px #F2AAAA;
+  /* text-shadow:7px 7px #ffcd36; */
 }
 
 .iconContainer{
@@ -85,12 +86,12 @@ span{
   margin: 2% 0;
   transition:400ms ease;
   padding:5px;
-  color:#fff;
+  color:#ffcd36;
 }
 
 .weatherIcons:hover{
   scale:1.2;
-  filter: drop-shadow(3px 3px 1px #F2AAAA);
+  filter: drop-shadow(2px 2px 1px #000);
 }
 
 input[type=text],
@@ -111,24 +112,24 @@ input[type=text]{
   width: 60%;
   text-align: center;
   padding:20px;
-  border-bottom:solid 3px #F2AAAA;
+  border-bottom:solid 3px #ffcd36;
 }
 
 input[type=text]:focus,
 input[type=text]:hover{
-  border: solid 3px #F2AAAA;
+  border: solid 3px #ffcd36;
 }
 
 button{
   width:30%;
-  color:#fff;
-  background:#F2AAAA;
+  color:#000;
+  background:#ffcd36;
 }
 
 button:hover,
 button:focus{
-  color: #F2AAAA;
-  border: solid 3px #F2AAAA;
+  color: #000;
+  border: solid 3px #ffcd36;
   background: #fff;
 }
 
@@ -165,8 +166,8 @@ button:focus{
 
 .row3{
   margin-top:40px;
-  border-top:5px solid #fff;
-  border-bottom:5px solid #fff;
+  border-top:5px solid rgba(54, 54, 54, 0.897);
+  border-bottom:5px solid rgba(54, 54, 54, 0.897);
 }
 
 .square{
@@ -223,7 +224,7 @@ button:focus{
 }
 
 .weatherIcon{
-  color:#fff;
+  color:rgba(54, 54, 54, 0.897);
   font-size: 2rem;
 }
 
