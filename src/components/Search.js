@@ -9,6 +9,7 @@ class Search extends Component{
             <div className='searchContainer'>
             <h1>Weather <span>Radar</span>  <FontAwesomeIcon icon={faSearchLocation} className='searchIcon'/></h1>
             <IconsRow />
+            <h2>Enter a City</h2>
             <form action="" onSubmit={this.props.handleSubmit}>
               <label htmlFor="search" className='visuallyHidden'></label>
               <input onChange={this.props.handleChange}type="text" placeholder='City' />

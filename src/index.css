@@ -50,6 +50,14 @@ code {
   margin: 0 auto;
 }
 
+h1{
+  font-size: 6.5rem;
+  font-weight:200;
+  margin: 5% auto;
+  color:rgba(54, 54, 54, 0.897);
+  text-shadow:2px 2px #ffcd36;
+}
+
 h2,
 p{
   color:#000;
@@ -57,17 +65,17 @@ p{
   text-transform: normal;
 }
 
-p{
-  font-size:2rem;
+h1,
+h2{
+  font-family: 'Courier New', Courier, monospace
 }
 
-h1{
-  font-size: 6.5rem;
-  font-weight:200;
-  margin: 5% auto;
-  font-family: 'helvetica neue', Helvetica, Arial, sans-serif;
-  color:rgba(54, 54, 54, 0.897);
-  text-shadow:2px 2px #ffcd36;
+h2{
+  font-size: 2rem;
+}
+
+p{
+  font-size:2rem;
 }
 
 span{
@@ -87,11 +95,6 @@ span{
   transition:400ms ease;
   padding:5px;
   color:#ffcd36;
-}
-
-.weatherIcons:hover{
-  scale:1.2;
-  filter: drop-shadow(2px 2px 1px #000);
 }
 
 input[type=text],

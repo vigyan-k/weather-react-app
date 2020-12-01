@@ -69,7 +69,7 @@ class App extends Component {
         isLoading: false
       })
     }).catch((error)=>{
-      alert('There were no matching cities, please try again')
+      alert('There were no matching cities, please try again');
     })
   }
 
@@ -79,7 +79,7 @@ class App extends Component {
         <div className="wrapper">
           <Search handleClick={this.handleClick} handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
           <div className='colorBox'>
-          {this.state.isLoading ? <p>Enter a City!</p> : this.state.detailArray.map( (item, index) => { 
+          {this.state.isLoading ?' ' : this.state.detailArray.map( (item, index) => { 
             return (
               <Weather
               key = {index}
