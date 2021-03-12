@@ -6,6 +6,8 @@ const Weather = ({cityName, country, currentTemp, feelsLike, minTemp, maxTemp, w
 
     let weatherIcon = undefined;
 
+    // Change to toggle
+
     if (main === 'Clear') {
         weatherIcon = <FontAwesomeIcon icon={faSun} />;
     }  else if (main === 'Clouds') {
@@ -43,8 +45,6 @@ const Weather = ({cityName, country, currentTemp, feelsLike, minTemp, maxTemp, w
     } else {
        protection = "you don't need an umbrella";
     }
-
-    
     
     return (
         <div className='modal' id='modal'>

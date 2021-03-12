@@ -50,7 +50,7 @@ class App extends Component {
     })
   }
 
-  handleClick = (event) => {
+  handleClick = (event) => { // Grab information from endpoint when button is clicked
     event.preventDefault();
     axios({
       url: api.base,
