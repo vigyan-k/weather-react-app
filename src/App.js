@@ -75,38 +75,38 @@ class App extends Component {
 
   render(){
     return (
-      <div>
-      <div className='main'>
-        <div className="wrapper">
-          <Search handleClick={this.handleClick} handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
-          <div className='colorBox'>
-          {this.state.isLoading ?' ' : this.state.detailArray.map( (item, index) => { 
-            return (
-              <Weather
-              key = {index}
-              index = {item.weather.id}
-              cityName = {item.name}
-              country = {item.sys.country}
-              currentTemp = {item.main.temp}
-              feelsLike = {item.main.feels_like}
-              minTemp = {item.main.temp_min}
-              maxTemp = {item.main.temp_max}
-              weatherDescription = {item.weather[0].description}
-              main = {item.weather[0].main}
-              windSpeed = {item.wind.speed}
-              />
-            )
-          })
-          }
-          <DateTime />
+      <div className="body">
+        <div className='main'>
+          <div className="wrapper">
+            <Search handleClick={this.handleClick} handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
+            <div className='colorBox'>
+            {this.state.isLoading ?' ' : this.state.detailArray.map( (item, index) => { 
+              return (
+                <Weather
+                key = {index}
+                index = {item.weather.id}
+                cityName = {item.name}
+                country = {item.sys.country}
+                currentTemp = {item.main.temp}
+                feelsLike = {item.main.feels_like}
+                minTemp = {item.main.temp_min}
+                maxTemp = {item.main.temp_max}
+                weatherDescription = {item.weather[0].description}
+                main = {item.weather[0].main}
+                windSpeed = {item.wind.speed}
+                />
+              )
+            })
+            }
+            <DateTime />
+            </div>
           </div>
         </div>
-      </div>
-      <footer>
-          <div className='copyright'>
-          <p>Copyright Vigyan Kayastha 2020</p>
-          </div>
-        </footer>
+        <footer>
+            <div className='copyright'>
+            <p>Copyright Vigyan Kayastha 2020</p>
+            </div>
+          </footer>
       </div>
     );
   }
