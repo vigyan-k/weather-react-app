@@ -75,6 +75,7 @@ class App extends Component {
 
   render(){
     return (
+      <div>
       <div className='main'>
         <div className="wrapper">
           <Search handleClick={this.handleClick} handleSubmit={this.handleSubmit} handleChange={this.handleChange}/>
@@ -100,12 +101,12 @@ class App extends Component {
           <DateTime />
           </div>
         </div>
-        <footer>
+      </div>
+      <footer>
           <div className='copyright'>
           <p>Copyright Vigyan Kayastha 2020</p>
           </div>
         </footer>
-        
       </div>
     );
   }
